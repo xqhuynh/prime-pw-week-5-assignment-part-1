@@ -25,12 +25,17 @@ console.log("A little about me:", me);
   - Console.log fullName
 */
 // No space between first and last name
-// let fullName = me.firstName + me.lastName;
-// Space between first and last name
-let fullName = `${me.firstName} ${me.lastName}`;
-// Another way:
-// let fullName = me.firstName + " " + me.lastName;
+let fullName = me.firstName + me.lastName;
 console.log(fullName);
+// Space between first and last name using template literals
+let fullName2 = `${me.firstName} ${me.lastName}`;
+console.log(fullName2);
+// Another way using concatenation
+let fullName3 = me.firstName + " " + me.lastName;
+console.log(fullName2);
+// Playing around w/bracket notation to use expression
+const myName = "Name"; // Will look for properties that have 'Name' in it
+console.log(me[`first${myName}`], me["last" + myName]);
 
 /* 3. Nested arrays
   - Console.log your first favorite food
@@ -39,9 +44,9 @@ console.log(fullName);
 let firstFaveFood = me.favThreeFoods[0];
 let lastFaveFood = me.favThreeFoods.slice(-1); //Returns element as new array object
 let lastFaveFood2 = me.favThreeFoods[3];
-console.log('First favorite food is:', firstFaveFood);
-console.log('Last favorite food is:', lastFaveFood);
-console.log('Last favorite food is:', lastFaveFood2);
+console.log("First favorite food is:", firstFaveFood);
+console.log("Last favorite food is:", lastFaveFood);
+console.log("Last favorite food is:", lastFaveFood2);
 
 /* 4. Change a property of an existing object.
   - Console.log your current shoe count.
@@ -61,5 +66,5 @@ console.log(`Updated shoe count: ${newShoeCount}`);
   - Console.log your object
 */
 me.favoriteColor = "green";
-console.log('Favorite color is:', me.favoriteColor);
-console.log('Updated object:', me);
+console.log("Favorite color is:", me.favoriteColor);
+console.log("Updated object:", me);

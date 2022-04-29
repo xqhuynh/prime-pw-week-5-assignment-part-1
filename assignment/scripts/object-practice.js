@@ -1,4 +1,4 @@
-console.log('***** Object Practice *****')
+console.log("***** Object Practice *****");
 
 // Add the required code to complete the tasks below
 
@@ -10,8 +10,13 @@ console.log('***** Object Practice *****')
 */
 const me = {
   // TODO - add properties here
+  firstName: "Savon",
+  lastName: "Huynh",
+  hasSiblings: true,
+  shoeCount: 7,
+  favThreeFoods: ["pho", "chicken wings", "pizza", "fish"],
 };
-console.log('A little about me:', me);
+console.log("A little about me:", me);
 
 /* 2. Accessing object properties.
   - Create a variable called fullName 
@@ -19,15 +24,24 @@ console.log('A little about me:', me);
     created above to set its value. 
   - Console.log fullName
 */
-
-
+// No space between first and last name
+// let fullName = me.firstName + me.lastName;
+// Space between first and last name
+let fullName = `${me.firstName} ${me.lastName}`;
+// Another way:
+// let fullName = me.firstName + " " + me.lastName;
+console.log(fullName);
 
 /* 3. Nested arrays
   - Console.log your first favorite food
   - Console.log your last favorite food 
 */
-
-
+let firstFaveFood = me.favThreeFoods[0];
+let lastFaveFood = me.favThreeFoods.slice(-1); //Returns element as new array object
+let lastFaveFood2 = me.favThreeFoods[3];
+console.log(firstFaveFood);
+console.log(lastFaveFood);
+console.log(lastFaveFood2);
 
 /* 4. Change a property of an existing object.
   - Console.log your current shoe count.
@@ -35,7 +49,10 @@ console.log('A little about me:', me);
   - Set your object's shoeCount to be what it was plus 1
   - Console.log your updated shoe count. 
 */
-
+console.log(`Current pairs of shoes: ${me.shoeCount}`);
+let newShoeCount = me.shoeCount + 1;
+console.log(`Added another pair of shoes`);
+console.log(`Updated shoe count: ${newShoeCount}`);
 
 /* 5. Add a new property to an existing object.
   - Add a 'favoriteColor' to your existing object
@@ -43,3 +60,6 @@ console.log('A little about me:', me);
   - Cool huh? It works, even though it wasn't there before
   - Console.log your object
 */
+me.favoriteColor = "green";
+console.log(me.favoriteColor);
+console.log(me); 

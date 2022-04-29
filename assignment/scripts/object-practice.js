@@ -39,9 +39,9 @@ console.log(fullName);
 let firstFaveFood = me.favThreeFoods[0];
 let lastFaveFood = me.favThreeFoods.slice(-1); //Returns element as new array object
 let lastFaveFood2 = me.favThreeFoods[3];
-console.log(firstFaveFood);
-console.log(lastFaveFood);
-console.log(lastFaveFood2);
+console.log('First favorite food is:', firstFaveFood);
+console.log('Last favorite food is:', lastFaveFood);
+console.log('Last favorite food is:', lastFaveFood2);
 
 /* 4. Change a property of an existing object.
   - Console.log your current shoe count.
@@ -61,5 +61,5 @@ console.log(`Updated shoe count: ${newShoeCount}`);
   - Console.log your object
 */
 me.favoriteColor = "green";
-console.log(me.favoriteColor);
-console.log(me); 
+console.log('Favorite color is:', me.favoriteColor);
+console.log('Updated object:', me);
